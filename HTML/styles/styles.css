@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/*------------------*\
+  #RESET
+\*-------------------*/
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {list-style: none;}
+a { text-decoration: none;}
+a,img, span, button,input {
+    display: block;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+    /* display: none;  */
+}
+::-webkit-scrollbar-track {
+    background: var(--brand-purple);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--brand-blue);
+    border-left: 2px solid var(--brand-blue);
+}
+
+/*------------------*\
+  #Store variable
+\*-------------------*/
+:root {
+    --brand-purple: rgb(72, 19, 118);
+    --brand-blue: #8de3e9;
+    --brand-green: #8be495;
+}
+
+header {
+   
+    height: 15vh
+}
+
+nav ul {
+    /* background-color: #8be495 */
+   
+    list-style-type: none;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+        margin: auto;
+    border: 2px solid red;
+}
+
+main {
+    background-color: #ebfdfc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+aside {
+    background-color: var(--brand-blue);
+    flex: 1;
+}
+
+article :first-child {
+    color: var(--brand-purple);
+    font-weight: bolder;
+    font-size: 48px;
+    font-family: poppins;
+}
+.content {  
+    flex: 5;
+    padding-left: 10px;
+}
+audio+p {
+    font-size: 14;
+    font-weight: bolder;
+    color: var(--brand-green);
+}
+main>section>article>img {
+    border-radius: 50%;
+}
+main>section>article>img:hover {
+   width: 50%;
+
+}
+.item {
+    background-color: darkolivegreen;
+   width: 90%;
+   height: 90%;
+}
+.grid_container {
+    background-color: darksalmon;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "A A B"
+        "A A C"
+        "D E F";
+    justify-items: start;
+}
+.item_A {
+    grid-area: A;
+}
+.item_B {
+    grid-area: B;
+}
+.item_C {
+    grid-area: C;
+}
+.item_D {
+    grid-area: D;
+}
+.item_E {
+    grid-area: E;
+}
+.item_F {
+    grid-area: F;
+}
+
+.grid2_container {
+    display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "sidel main sider"
+            "footer footer footer";
+        justify-items: start;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(234, 255, 0);
+}
+.sidel {
+    grid-area: sidel;
+    background-color: darkgreen;
+}
+.sider {
+    grid-area: sider;
+    background-color: darkgreen;
+}
+.main {
+    grid-area: main;
+    background-color: ghostwhite;
+}
+.footer {
+    grid-area: footer;
+    background-color: darkmagenta;
+}
+.plus {
+    display: none;
+}
+@media screen and (max-width: 640px){
+    .grid_container {
+        display: none;
+    }
+        .nav_ul {
+        display: none;
+    }
+    .plus {
+        display: block;
+    }
+}
+
+body {
+    animation: bodycolor 4s linear infinite;
+}
+@keyframes animationName {
+  0% { /* Styles at the start */ }
+  50% { /* Styles at the midpoint */ }
+  100% { /* Styles at the end */ }
+}
+@keyframes bodycolor {
+   from {
+    background-color: #e8e8e8;
+   }
+   50% {
+    background-color: purple;
+   }
+    to {
+        background-color:orange;
+    }
+
+}
+.jellyfish {
+    background-color: black;
+    margin: 20px;
+    width: 80%;
+    height: 20px;
+    animation: pulse 4s ease-in-out infinite alternate;
+}
+@keyframes pulse {
+    from {
+        transform: scale(0.9) translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1) translateY(-20px);
+        opacity: 1;
+        box-shadow: 0 0 40px 10px rgba(138, 43, 226, 1);
+    }
+    to {
+        transform: scale(0.9) translateY(0);
+        opacity: 0.8;
+    }
+}
+@media screen and (min-width: 640px) {
+    .grid2_container {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .plus {
+            display: block;
+        }
+}
+
+@media screen and (min-width: 640px) and (max-width: 768px){
+    h1 {font-size: 0.9em;}
+}

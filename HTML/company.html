@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Company Survey Form</h1>
+		<form
+			action=""
+			method="post">
+			<label for="first">First Name</label>
+			<input
+				type="text"
+				name="first" />
+			<!-- last name -->
+			<label for="last">Last Name</label>
+			<input
+				type="text"
+				name="last" /><br />
+			<!-- position -->
+			<label for="position">What position are you applying for?</label>
+			<select name="position">
+				<option value="">Please select position</option>
+				<option value="marketing">Marketing Specialist</option>
+				<option value="developer">Developer</option>
+				<option value="product">Product Designer</option>
+				<option value="content">Content Creator</option>
+				<option value="designer">Designer</option></select
+			><br />
+			<!-- employment status -->
+			<p>What is your current employment status</p>
+			<input
+				type="radio"
+				id="employed"
+				name="estatus"
+				value="employed" />
+			<label>Employed</label><br />
+			<input
+				type="radio"
+				id="self_employed"
+				name="estatus"
+				value="self_employed" />
+			<label>Self Employed</label><br />
+			<input
+				type="radio"
+				id="unemployed"
+				name="estatus"
+				value="unemployed" />
+			<label>Unemployed</label><br />
+			<input
+				type="radio"
+				id="student"
+				name="estatus"
+				value="student" />
+			<label>Student</label><br />
+			<!-- Available date -->
+			<label for="available_date">Available Start Date</label><br />
+			<input
+				type="date"
+				name="available_date" /><br />
+			<!-- expected Package -->
+			<label for="package">Expected Package</label><br />
+			<input
+				type="text"
+				name="package" /><br />
+			<!-- Address -->
+			<label for="address">Address</label><br />
+			<input
+				type="text"
+				name="address"
+				,
+				placeholder="Street Address" /><br />
+			<input
+				type="text"
+				name="address"
+				placeholder="City" />
+			<input
+				type="text"
+				name="address"
+				placeholder="Region" />
+			<!-- Age -->
+			<label for="last">What is your age</label>
+			<input
+				type="number"
+				maxlength="2"
+				max="99" /><br />
+                <!-- <input 
+                type="month"
+                min="1980-01"
+                max="2007-01"
+                required
+                /> -->
+
+			<!-- Single Choice -->
+			<label>Single Choice</label><br />
+			<input type="radio" name="sc" value="sc_no"/><label>No</label><br />
+			<input type="radio" name="sc" value="sc_yes_reno"/><label> Yes - but only with remuneration</label
+			><br>
+			<input type="radio" name="sc" value="sc_yes_advance"/><label>
+				Yes - but only if told long in advance</label
+			><br />
+			<input type="radio" name="sc" value="sc_yes_worker"/><label>
+                Yes - As I want everyone to notice that I am a hard-worker</label
+			><br />
+            <input type="file" accept="image/png, image/jpeg" />
+            <input type="submit"/>
+		</form>
+	</body>
+</html>
