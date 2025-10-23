@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!-- main -->
-     <!-- header -->
-      <!-- aside -->
-       <!-- article -->
-        <!-- section -->
-         <!-- footer -->
-    <!-- paragraph -->
-    <header></header>
-    <main>
-        <aside></aside>
-        <section>
-            <article>
-                <figure></figure>
-                <p></p>
-            </article>
-            <section></section>
-        </section>
-    </main>
-    <footer></footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- main -->
+		<!-- header -->
+		<!-- aside -->
+		<!-- article -->
+		<!-- section -->
+		<!-- footer -->
+		<!-- paragraph -->
+		<header></header>
+		<main>
+			<h2>BOOK LIBRARY</h2>
+			<p>Select a subject you want a book on</p>
+
+			<select
+				name="subject"
+				id="selectedSubject">
+				<option value="-">-----</option>
+				<option value="mathematics">Mathematics</option>
+				<option value="biology">Biology</option>
+				<option value="economics">Economics</option>
+				<option value="chemistry">Chemistry</option>
+			</select>
+			<br />
+			<button onclick="verifyBook()">Done</button>
+
+			<!-- 
+            switch (condition){
+            case "result1" : instruction 1;
+            break;
+            case "result2" : instruction 2;
+            break;
+            case "result3" : instruction 3;
+            break;
+            case "result4" : instruction 4;
+            break;
+            default: document.write("come back home")
+            }
+
+        -->
+		</main>
+		<footer></footer>
+
+		<script>
+			function verifyBook() {
+                var book = document.getElementById("selectedSubject").value;
+                console.log("the selected book is ", book );
+                const date = new Date();
+                const hour = date.getHours();
+				const greeting = hour <12? "Good Morning": hour < 18? "Good afternoon": "Good evening";
+
+                switch(book){
+                    case "mathematics": document.write("Mathematics book selected <br/>");
+                        break;
+                    case "biology": document.write("Biology book selected <br/>");
+                        break;
+                    case "economics": document.write("Economics book selected <br/>");
+                        break;
+                    case "chemistry": document.write("Chemistry book selected <br/>");
+                        break;
+                    default: document.write("No book selected <br/>")
+                }
+                document.write(`${greeting} <br/> <br/>`);
+                document.write(date);
+                document.write(hour)
+            }
+		</script>
+	</body>
 </html>

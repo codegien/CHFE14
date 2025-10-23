@@ -1,0 +1,50 @@
+<!-- // Define variables: Create variables for the package's weight and its destinationZone (e.g., "Abeokuta", "Ibadan", or
+"Lagos"). Also, set a baseCost.Check the destination: Use an if statement to check the destinationZone. For example, if
+the zone is "Ibadan", add N5000 to the baseCost. If it is "Lagos", add N1000.Check the weight: Use a separate if
+statement to check if the weight is over a certain limit (e.g., 5 kg). If it is, add an overweight fee (e.g., N1500) to
+the cost.Calculate the total: The final cost will be the sum of the base cost and any additional fees for destination or
+weight.Print a clear message to the console, such as "The total shipping cost for your 7kg package to Zone Ibadan is
+N8000."
+Bonus Challenge:
+Add a new boolean variable called isExpressDelivery. If isExpressDelivery is true, multiply the final calculated cost by
+1.5 to add a 50% surcharge for faster delivery. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul* del Cost</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+    <center>
+
+        <form class="contain">
+            <h1>Package Delivery Cost</h1>
+            <div class="input-group">
+                <label for="weight">Package weight</label><br>
+                <input type="number" id="weight" value="7" min="1"/>
+            </div>
+            <br>
+            <div class="input-group">
+                <label for="destination">Destination</label>
+                <select id="destination">
+                    <option value="Abeokuta">Abeokuta</option>
+                    <option value="Ibadan">Ibadan</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="input-group checkbox-group">
+                <input type="checkbox" id="express"/>
+                <label>Express Delivery (50% surcharge)</label>
+            </div>
+            
+            <p id="result"></p>
+        </form>
+        <button onclick="calculateCost()">Calculate Cost</button>
+    </center>
+    <script src="./script.js"></script>
+</body>
+</html>

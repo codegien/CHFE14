@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./JSBasic.css">
+    <title>Document</title>
+</head>
+<body>
+
+   <div class="son">
+    <h1>Shipping Calculator: Canada</h1>
+     <label for="weight">Package weight (kg)</label> 
+     <input type="number" id="weight" min="1" value="10"> <br>
+  <br>
+   <label for="Destinationprovince">
+   <select  id="Destinationprovince"> <br>
+    <option value="Select Province">Select Province</option>
+    <option value="Albera">Alberta</option>
+    <option value="Manitoba">Manitoba</option>
+    <option value="NewBrunswick">NewBrunswick</option>
+    <option value="Columba">Columba</option>
+    <option value="Labrador">Labrador</option>
+    <option value="NovaScotia">NovaScotia</option>
+    <option value="Ontario">Ontario</option>
+    <option value="Quebec">Quebec</option>
+   </select>
+   </label>
+    <br><br>
+  <div>
+    <input type="checkbox" id="express">
+   <label for="EXpress Dlivery"> Express Delivery</label>
+  </div> <br>
+  <button onclick="caculateDelivery()"> checked </button>
+  <p id="result">total </p>
+  <script src="./calc.js"></script>
+   </div>
+
+    
+</body>
+</html>

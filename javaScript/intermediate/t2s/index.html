@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t2s
+    </title>
+</head>
+<body>
+    <div>
+        <input id="input">
+        <button onclick="speak2()">Speak</button>
+        <select id="voiceselect"></select>
+    </div>
+    <script>
+        function speak(){
+            var text = document.getElementById("input").value;
+
+            const now = new Date();
+            const hour = now.getHours();
+
+            console.log(hour);
+
+            let greetings;
+            greetings= hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
+            var utterance = new SpeechSynthesisUtterance(greetings);
+            speechSynthesis.speak(utterance);
+        };
+    </script>
+    <script>
+        var text = document.getElementById("input").value;
+        const synth = window.speechSynthesis;
+        const utter = new SpeechSynthesisUtterance(text);
+        const voice = ()=> synth.getVoices().forEach(v => voiceselect.add(
+            new Option(`${v.name} (${v.lang})`, v.name)
+        ));
+        synth.onvoiceschanged = voice;
+        voice();
+        function speak2(){
+            utter.text = input.value;
+            utter.voice = synth.getVoices().find(v => v.name === voiceselect.value) || synth.getVoices()[0];
+            synth.speak(utter);
+        }
+    </script>
+</body>
+</html>
