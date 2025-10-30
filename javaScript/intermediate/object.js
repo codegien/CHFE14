@@ -59,3 +59,13 @@ room.calcArea().calcPerimeter();
 console.log(room);
 
 // let perimeter = 2 * width + 2 * height; 2(width + height)
+
+const myRoom= {
+	...room, area:'',
+	paintColor: "Orange",
+	ensuite: true
+}
+
+console.log(room);
+console.log(myRoom);
+ 
